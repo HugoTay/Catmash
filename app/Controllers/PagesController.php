@@ -33,12 +33,6 @@ class PagesController extends Controller {
 
 		$this->data->updateValues($id);
 		$this->data->createCats();
-
-		$cats = $this->data->getCats();
-
-		$all = $this->data->getAllCats();
-		$columns = DB::getSchemaBuilder()->getColumnListing((new Cats)->getTable());
-
 	}
 
 	public function getScores(RequestInterface $request, ResponseInterface $response) {
