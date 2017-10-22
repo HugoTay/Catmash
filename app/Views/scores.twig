@@ -1,0 +1,51 @@
+{% extends "layout.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="/css/facemash.css" type="text/css">
+    <link rel="stylesheet" href="/css/scores.css" type="text/css">
+{% endblock %}
+
+{% block scripts %}
+    {{ parent() }}
+    <script src="/js/pagination.js"></script>
+{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <h2 class="title_3 titles">Scores</h2>
+        <div class="scores">
+            <div class="table-users">
+                <table id="table-users" class="table table-sm table-hover">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Cat</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% set indice = 1 %}
+                        {% for cat in all %}
+                            <tr>
+                                <td>{{ indice }}</td>
+                                <td><img class="image-table" src="{{ cat.path }}" alt="{{ cat.tag }}"/></td>
+                                <td>{{ cat.score }}</td>
+                            </tr>
+                            {% set indice = indice + 1 %}
+                        {% endfor %}
+                    </tbody>
+                </table>
+                <script>
+                    $(function() {
+                        $("#table-users").simplePagination({
+                            previousButtonClass: "btn btn-danger",
+                            nextButtonClass: "btn btn-danger"
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+{% endblock %}

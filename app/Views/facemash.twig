@@ -1,0 +1,59 @@
+{% extends "layout.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="/css/facemash.css" type="text/css">
+{% endblock %}
+
+{% block scripts %}
+
+    {{ parent() }}
+    <script>
+        $(document).ready(function(){
+            $("#wrapper-cat").on('click', ".img-circle", function(e){
+                var id = $(this).attr('id');
+                $.ajax({
+                    type: 'POST',
+                    url: '{{ path_for('facemash') }}',
+                    data: {catId: id},
+                    success: function(data){
+                        $( "#wrapper-cat" ).load( "{{ path_for ('facemash') }} #wrapper-cat" );
+                    }
+                });
+            });
+        });
+    </script>
+
+{% endblock %}
+
+{% block content %}
+
+
+    <div id="wrapper-title" class="title_1 titles">
+        <img id="logo" src="/img/logo.png"/>
+    </div>
+    <p class="description titles">Who's cutest ? Click to choose.</p>
+    <div id="wrapper-cat">
+        <div class="row">
+            <div id="cat_1" class="cole">
+                <div class="image-select">
+                    <img id="cat_img_1" class="img-circle" height="200" width="200" src="{{ cats[0].path }}" />
+                </div>
+                <p class="score">{{ cats[0].score }} pts</p>
+            </div>
+
+            <div id="cat_2" class="cole">
+                <div class="image-select">
+                    <img id="cat_img_2" class="img-circle" height="200" width="200" src="{{ cats[1].path }}" />
+                </div>
+                <p class="score">{{ cats[1].score }} pts</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <hr>
+            <p class="end titles">Photos taken from <a href="https://www.tumblr.com/">tumblr</a>.
+        </div>
+    </div>
+
+{% endblock %}

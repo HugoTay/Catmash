@@ -1,0 +1,15 @@
+{% extends "layout.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="/css/home.css" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <div class="title">
+        Catmash
+    </div>
+    <div class="menu2">
+        <a href="{{ path_for ('facemash') }}"><button type="button" class="voter btn btn-primary btn-lg">Voter</button></a>
+    </div>
+{% endblock %}

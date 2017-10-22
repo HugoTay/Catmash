@@ -1,0 +1,10 @@
+
+@font-face {
+    font-family: Airfly;
+    src: url('/polices/airfly.ttf');
+}
+
+.navbar{
+
+    margin-top: 25px;
+}
