@@ -11,5 +11,5 @@ MySQL Database running in back-end.
 
 To make it works, you have to modify a few things.
 
-First of all, you have to change the configuration settings to access to the database in ** app/settings.php **. 
+First of all, you have to change the configuration settings to access to the database in **app/settings.php**. 
 Set your own informations instead.
