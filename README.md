@@ -44,4 +44,4 @@ Set your own informations instead.
 
 To run the server, launch terminal at the project **root path** and run next command line :
 
-`php -S localhost:8080 -t public/ -ddiplay_errors=1 -dzned_extension=xdebug.so**`
+`php -S localhost:8080 -t public/ -ddiplay_errors=1 -dzned_extension=xdebug.so`
