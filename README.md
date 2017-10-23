@@ -25,8 +25,8 @@ Set your own informations instead.
 ```php     
         'db' => [
             'driver'    => 'mysql',
-            'host'      => <your_host>,
-            'database'  => <your_database>,
+            'host'      => '<your_host>',
+            'database'  => '<your_database>',
             'username'  => '<mysql_username>',
             'password'  => '<mysql_password>',
             'charset'   => 'utf8',
@@ -36,5 +36,5 @@ Set your own informations instead.
 ```
 ### Launch the server
 
-To run the server, launch terminal at the project **root path** and run next command line 
-            **php -S localhost:8080 -t public/ -ddiplay_errors=1 -dzned_extension=xdebug.so**
+To run the server, launch terminal at the project **root path** and run next command line :
+**php -S localhost:8080 -t public/ -ddiplay_errors=1 -dzned_extension=xdebug.so**
