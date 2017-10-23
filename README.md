@@ -2,7 +2,7 @@
 
 
 ## Introduction
-Catmash is a based on Facemash (project made by Facebook founder). This project responds to a job admission for L'Atelier.
+Catmash is a based on Facemash (project made by Facebook founder). This project responds to a job admission for [L'Atelier](https://latelier.co/).
 
 It is created with [SlimFramework](https://www.slimframework.com/) (micro php framework).
 
