@@ -88,6 +88,9 @@ td {
     background-color: #bdc3c7;
 }
 
+.nav-link{
+    cursor: pointer;
+}
 .img-circle {
 
     margin-top: 80px;
@@ -112,4 +115,22 @@ td {
 
     font-size: 25px;
     margin-top: 10px;
+}
+
+.table-users, .top_ranks {
+
+    margin-top : 50px;
+}
+
+.top-image{
+
+    margin-right: 100px;
+    vertical-align: center;
+
+}
+
+.best{
+    display: flex;
+    justify-content:center;
+    margin-bottom: 15px;
 }

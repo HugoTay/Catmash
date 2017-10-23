@@ -2,20 +2,76 @@
 
 {% block stylesheets %}
     {{ parent() }}
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="/css/facemash.css" type="text/css">
-    <link rel="stylesheet" href="/css/scores.css" type="text/css">
+    <!-- <link rel="stylesheet" href="/css/scores.css" type="text/css"> -->
 {% endblock %}
 
 {% block scripts %}
     {{ parent() }}
     <script src="/js/pagination.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            $(".table-users").css("display", "none");
+        });
+
+        function allRanks(){
+            $(".top_ranks").hide()
+            $(".table-users").show()
+        }
+        function topRanks(){
+            $(".table-users").hide()
+            $(".top_ranks").show()
+        }
+    </script>
 {% endblock %}
 
 {% block content %}
 
     <div class="container">
         <h2 class="title_3 titles">Scores</h2>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+              <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link" onclick="allRanks();">All ranks</a></li>
+                  <li class="nav-item"><a class="nav-link" onclick="topRanks();">Top 3 cats</a></li>
+              </ul>
+          </div>
+        </nav>
+
         <div class="scores">
+            <div class="top_ranks">
+                <div class="w3-container best">
+                    <div class="w3-card-4" style="width:50%;">
+                        <p>
+                        <img class="top-image" src="{{ all[0].path }}" alt="{{ all[0].tag }}" height="200" width="200">
+                            Score : {{ all[0].score }}
+                        </p>
+                    </div>
+                </div>
+                <div class="w3-container best">
+                    <div class="w3-card-4" style="width:50%;">
+                        <p>
+                        <img class="top-image" src="{{ all[1].path }}" alt="{{ all[1].tag }}" height="200" width="200">
+                            Score : {{ all[1].score }}
+                        </p>
+                    </div>
+                </div>
+                <div class="w3-container best">
+                    <div class="w3-card-4" style="width:50%;">
+                        <p>
+                        <img class="top-image" src="{{ all[2].path }}" alt="{{ all[2].tag }}" height="200" width="200">
+                            Score : {{ all[2].score }}
+                        </p>
+                    </div>
+                </div>
+            </div>
             <div class="table-users">
                 <table id="table-users" class="table table-sm table-hover">
                     <thead>
