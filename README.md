@@ -22,7 +22,7 @@ First of all, you have to change the configuration settings to access to the dat
 Set your own informations instead.
 
 ### App/Settings.php
-`        
+```php     
         'db' => [
             'driver'    => 'mysql',
             'host'      => <your_host>,
@@ -33,7 +33,7 @@ Set your own informations instead.
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
         ]
-`
+```
 ### Launch the server
 
 To run the server, launch terminal at the project **root path** and run next command line 
