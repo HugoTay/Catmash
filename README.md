@@ -6,13 +6,18 @@ Catmash is a based on Facemash (project made by Facebook founder). This project 
 
 It is created with SlimFramework (micro php framework).
 
+## Configuration
+
+* PHP (7.0)
+* MySQL (5.7.14)
+* Eloquent 5.5
+
 ## Prerequisites
 
 Make sure to have few components to make it works.
-* php
+* PHP (5.6 or above)
 * MySQL (Apache not needed, Slim has internal router)
 * Composer
-*
 
 ## Getting started
 
