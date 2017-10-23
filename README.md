@@ -18,7 +18,8 @@ Make sure to have few components to make it works.
 
 To make it works, you have to modify a few things.
 
-First of all, you have to change the configuration settings to access to the database in **app/settings.php**. 
+First of all, you have to change the configuration settings to access to the database in **app/settings.php**.
+
 Set your own informations instead.
 
 ### App/Settings.php
@@ -37,4 +38,5 @@ Set your own informations instead.
 ### Launch the server
 
 To run the server, launch terminal at the project **root path** and run next command line :
+
 **php -S localhost:8080 -t public/ -ddiplay_errors=1 -dzned_extension=xdebug.so**
