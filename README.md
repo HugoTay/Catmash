@@ -4,7 +4,7 @@
 ## Introduction
 Catmash is a based on Facemash (project made by Facebook founder). This project responds to a job admission for L'Atelier.
 
-It is created with SlimFramework (micro php framework).
+It is created with [SlimFramework](https://www.slimframework.com/) (micro php framework).
 
 ## Configuration
 
