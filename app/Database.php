@@ -50,8 +50,9 @@ class Database {
             $this->unsetCats();
         array_push($data,$this->createCat());
         do{
-            array_push($data,$this->createCat($data[0]['score']));
-        }while($data[0].["path"] == $data[1].["path"]);
+            $cat = $this->createCat($data[0]['score']);
+        }while($data[0]["path"] === $cat["path"]);
+        array_push($data,$cat);
         $this->saveCats($data);
     }
 
