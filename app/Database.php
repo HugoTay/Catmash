@@ -49,7 +49,9 @@ class Database {
         if ($this->isDefined())
             $this->unsetCats();
         array_push($data,$this->createCat());
-        array_push($data,$this->createCat($data[0]['score']));
+        do{
+            array_push($data,$this->createCat($data[0]['score']));
+        }while($data[0].["path"] == $data[1].["path"]);
         $this->saveCats($data);
     }
 
