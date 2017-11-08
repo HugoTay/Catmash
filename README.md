@@ -10,7 +10,7 @@ It is created with [SlimFramework](https://www.slimframework.com/) (micro php fr
 
 Make sure to have few components to make it works.
 * PHP (5.6 or above)
-* MySQL (Apache not needed, Slim has internal router)
+* MySQL
 * Composer
 
 ## Getting started
